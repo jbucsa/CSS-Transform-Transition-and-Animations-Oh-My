@@ -27,12 +27,34 @@ body  {
   height: 10px;
   width: 70%;
   margin: auto;
+  transition-duration: 1.0s;
+}
+
+.hamburger:hover #top {
+  transform-origin: -0.4em 1.2em ;
+  transform: rotateZ(45deg);
+}
+
+.hamburger:hover #bottom {
+  transform-origin: -.5em -0.5em ;
+  transform: rotateZ(-45deg);
+}
+
+.hamburger:hover #middle {
+  visibility: hidden;
+  transition-duration: 0.1s;
+}
+
+@keyframes fadeOut {
+  100% { background-color: rebeccapurple; }
+  0% { background-color: mediumvioletred; }
 }
 
 li {
   list-style-type: none;
   margin-bottom: 1em;
 }
+
 
 a {
   text-decoration: none;
